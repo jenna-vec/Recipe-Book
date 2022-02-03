@@ -4,7 +4,7 @@
 
 
 This project is created with Firebase authentication, Firestore Database, and React. It is styled using [MUI library](https://mui.com/).
-Users can create an account with their email, then write/update/delete recipes in their private recipe book. 
+Users can create an account with their email, then write/update/delete recipes in their private recipe book. Users are also able to change their account name and password using Firebase Authentication.
 
 **Rules:**
 Firebase security rules allow data, such as user email, to remain private. 
