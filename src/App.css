@@ -1,0 +1,417 @@
+/* Text */
+
+* {
+  text-decoration: none !important;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+a {
+  cursor: pointer;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  color: #707070;
+}
+
+a:visited {
+  color: #707070;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  color: #707070;
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+p, span {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  color: #707070;
+}
+
+.center {
+  text-align: center;
+}
+
+.petit-cap {
+  font-variant-caps: all-petite-caps;
+}
+
+/* Main */
+body {
+  margin: 0;
+  color: #707070;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  margin: 3vh auto;
+}
+
+.card {
+  background-color: #F5F4F4;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  overflow: hidden;
+  min-width: 250px;
+  padding: 2em;
+}
+
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  background-color: #F5F4F4 !important;
+  color: #707070 !important;
+}
+
+.fit-width {
+  width: fit-content;
+}
+
+
+/* Flex Boxes */
+.main-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Home Page */
+.home-flex {
+  display: flex;
+  flex-direction: column;
+  max-width: 87vw;
+  grid-gap: 3em;
+  margin-top: 5em;
+}
+
+.home-title-margin {
+  margin: 1.2em 0 1em 0;
+}
+
+.title-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+
+
+/* Forms */
+.width {
+  width: 275px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1em;
+  width: 100%;
+}
+
+/* Account Settings */
+.account-flex {
+  margin: 3em auto 0 auto;
+  grid-gap: 2em;
+}
+
+.account {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 1em;
+  align-items: center;
+}
+
+.account-change {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  margin: 17px, 0, 1em, 0;
+  grid-gap: 4px;
+  cursor: pointer;
+}
+
+#confirm-delete {
+  text-align: center;
+  display: none;
+}
+
+#password-change {
+  display: none;
+}
+
+
+
+/* Dashboard (Home Page) */
+
+.dash {
+  height: fit-content;
+  min-height: 77vh;
+  width: 91vw;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dash-card {
+  display: flex;
+  grid-gap: 2em;
+  position: inherit;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.float-right {
+  text-align-last: right;
+}
+
+.css-fzm7i {
+  overflow: scroll;
+}
+
+/* Food Category Input */
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  text-align: left;
+}
+
+/* Plus Sign */
+.css-55fg2l-MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+.add-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 2em auto;
+  grid-gap: 1em;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  row-gap: 0;
+  align-self: center;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.gap {
+  grid-gap: 3px;
+}
+
+.column {
+  width: 70vw;
+  height: 0;
+}
+
+.css-1cvn495-MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+.loading-div {
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.loading {
+  animation: rotation 2s infinite linear;
+}
+
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1em;
+  margin-top: 1em;
+}
+
+.css-9mgopn-MuiDivider-root {
+  margin-top: 0.5em !important;
+}
+
+
+/* Recipe Page */
+.no-margin-block {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.recipe-card-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  grid-gap: 1em;
+}
+
+.recipe-card {
+  background-color: #F5F4F4;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  height: fit-content;
+  min-width: 250px;
+  max-width: 74vw;
+  padding: 2em;
+  align-self: center;
+}
+
+.info {
+  margin-block-start: 4px;
+  margin-block-end: 17px;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.transform {
+  transform: translate(12px,-36px);
+}
+
+
+
+
+/* Animation */
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* Landscape */
+@media only screen
+  and (orientation: landscape) {
+    .title-flex {
+      margin-top: 2em;
+    }
+    .css-fzm7i {
+      height: 78vh;
+      width: 78vw;
+    }
+    .recipe-card {
+      min-width: 26vw;
+    }
+    .recipe-card-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      grid-gap: 4em;
+    }
+    .transform {
+      transform: translate(20px,-23px);
+    }  
+}
+
+/* IPAD */
+@media only screen 
+  and (min-device-width: 481px) 
+  and (max-device-width: 1024px) 
+  and (orientation:portrait) {
+    .home-flex {
+      flex-direction: row;
+      margin-top: -5em;
+      grid-gap: 3em;
+    }
+    .title-flex {
+      text-align: left;
+      margin-top: 2em;
+      height: 46%;
+      justify-content: space-around;
+    }
+    .add-flex {
+      height: 67vh;
+      width: 62vw;
+    }
+    .ingredients-list {
+      width: 59vw;
+    }
+    .column {
+      width: 59vw;
+    } 
+    .recipe-card {
+      max-width: 60vw;
+      padding: 2.5em;
+    }  
+    .recipe-card-div {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 2em;
+      grid-gap: 4em;
+  }
+}
+  
+/* Laptop */
+@media screen 
+  and (min-width: 1440px)
+  and (orientation: landscape) {
+    .home-flex {
+      flex-direction: row;
+      margin-top: 0;
+      grid-gap: 8em;
+    }
+    .title-flex {
+      text-align: left;
+      height: 45%;
+      justify-content: space-around;
+    }
+    .add-flex {
+      height: 62vh;
+      width: 62vw;
+    }
+    .ingredients-list {
+      width: 28vw;
+    }
+    .column {
+      width: 28vw;
+    }  
+    .recipe-card-div {
+      grid-gap: 5em;
+    }  
+}
+
+/* Larger */
+@media screen 
+    and (min-device-width: 1920px)
+    and (orientation: landscape){
+      .recipe-card {
+        width: 40vw;
+        padding: 3em;
+    }
+    .recipe-card-div {
+      margin-top: 3em;
+   }
+}
