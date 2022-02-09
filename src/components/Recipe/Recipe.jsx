@@ -13,7 +13,6 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import Stack from '@mui/material/Stack';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
-import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { doc, deleteDoc, setDoc } from "firebase/firestore";
 import { db } from '../../firebase';
