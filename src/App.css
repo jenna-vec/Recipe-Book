@@ -15,12 +15,6 @@ a:visited {
   color: #707070;
 }
 
-h1 {
-  font-style: italic;
-  font-weight: 800;
-  font-size: 3em;
-}
-
 h1, h2, h3, h4, h5 {
   font-family: "Roboto","Helvetica","Arial",sans-serif;
   color: #707070;
@@ -38,6 +32,10 @@ p, span {
   text-align: center;
 }
 
+.white {
+  color: white !important;
+}
+
 .petit-cap {
   font-variant-caps: all-petite-caps;
 }
@@ -48,28 +46,25 @@ body {
   color: #707070;
 }
 
-.child {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 footer {
   width: 100%;
   bottom: 0;
-  position: fixed;
+  position: relative;
   margin: 3vh auto;
 }
 
 .card {
   background-color: #F5F4F4;
-  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 4px;
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
-  overflow: hidden;
   min-width: 250px;
+  max-width: 74vw;
   padding: 2em;
+}
+
+.align-center {
+  align-self: center;
 }
 
 .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
@@ -86,6 +81,7 @@ footer {
 .main-flex {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .horizontal-flex {
@@ -97,28 +93,6 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
-
-/* Home Page */
-.home-flex {
-  display: flex;
-  flex-direction: column;
-  max-width: 87vw;
-  grid-gap: 3em;
-  margin-top: 5em;
-}
-
-.home-title-margin {
-  margin: 1.2em 0 1em 0;
-}
-
-.title-flex {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
-}
-
 
 /* Forms */
 .width {
@@ -132,6 +106,38 @@ footer {
   flex-direction: column;
   grid-gap: 1em;
   width: 100%;
+}
+
+/* Home Page - Not Signed In*/
+.home {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(163deg, rgba(255,255,255,1) 0%, rgba(78,127,175,1) 100%);
+  display: flex;
+  justify-content: center;
+  padding-top: 30vh;
+}
+
+.home-title-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 15em;
+}
+
+.home-recipe {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(12deg, rgba(255,255,255,0) 8%, rgba(78,127,175,1) 100%);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8em;
+}
+
+.register {
+  width: fit-content;
+  margin: 7em 0 5em 0;
+  align-self: center;
 }
 
 /* Account Settings */
@@ -170,26 +176,18 @@ footer {
 /* Dashboard (Home Page) */
 
 .dash {
-  height: fit-content;
-  min-height: 77vh;
-  width: 91vw;
   margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: fit-content;
+  align-self: center;
 }
 
 .dash-card {
   display: flex;
+  max-width: 91vw;
   grid-gap: 2em;
-  position: inherit;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.float-right {
-  text-align-last: right;
 }
 
 .css-fzm7i {
@@ -206,13 +204,21 @@ footer {
   cursor: pointer;
 }
 
+.plus {
+    margin: 2em 37vw !important;
+}
+
 .add-flex {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: fit-content;
   margin: 2em auto;
-  grid-gap: 1em;
+  grid-gap: 2em;
+}
+
+.css-102tef7 {
+  text-align: left !important;
 }
 
 .ingredients-list {
@@ -220,7 +226,6 @@ footer {
   flex-wrap: wrap;
   column-gap: 1em;
   row-gap: 0;
-  align-self: center;
   justify-content: space-between;
   width: 70vw;
 }
@@ -273,13 +278,32 @@ footer {
   grid-gap: 1em;
 }
 
+.ingredients {
+  min-width: 20vw;
+}
+
+.p-margin {
+  margin-block-start: 0.1em !important;
+  margin-block-end: 0.1em !important;
+}
+
+.recipe-width {
+  margin: 3em auto 1em auto;
+  width: 81vw;
+}
+
+.fab {
+  text-align-last: right;
+  margin: 0 8vw 0 0;
+}
+
 .recipe-card {
   background-color: #F5F4F4;
-  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 4px;
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
-  height: fit-content;
+  height: 75vh;
+  overflow: scroll;
   min-width: 250px;
   max-width: 74vw;
   padding: 2em;
@@ -291,10 +315,6 @@ footer {
   margin-block-end: 17px;
   font-style: italic;
   font-size: smaller;
-}
-
-.transform {
-  transform: translate(12px,-36px);
 }
 
 
@@ -315,24 +335,26 @@ footer {
 /* Landscape */
 @media only screen
   and (orientation: landscape) {
-    .title-flex {
-      margin-top: 2em;
-    }
     .css-fzm7i {
       height: 78vh;
       width: 78vw;
     }
+    .plus {
+      margin: 2em 2em 0 0 !important;
+      float: right;
+    }
     .recipe-card {
       min-width: 26vw;
+      max-width: 67vw;
     }
     .recipe-card-div {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      grid-gap: 4em;
+      justify-content: center;
+      grid-gap: 3em;
     }
-    .transform {
-      transform: translate(20px,-23px);
+    .dash {
+      margin-top: 10vh;
     }  
 }
 
@@ -341,16 +363,12 @@ footer {
   and (min-device-width: 481px) 
   and (max-device-width: 1024px) 
   and (orientation:portrait) {
-    .home-flex {
-      flex-direction: row;
-      margin-top: -5em;
-      grid-gap: 3em;
+    .home {
+      height: 43vh;
     }
-    .title-flex {
-      text-align: left;
-      margin-top: 2em;
-      height: 46%;
-      justify-content: space-around;
+    .plus {
+      margin: 2em 2em 0 0 !important;
+      float: right;
     }
     .add-flex {
       height: 67vh;
@@ -363,30 +381,37 @@ footer {
       width: 59vw;
     } 
     .recipe-card {
-      max-width: 60vw;
+      max-width: 72vw;
       padding: 2.5em;
     }  
     .recipe-card-div {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
       margin-top: 2em;
       grid-gap: 4em;
-  }
+    }
+    .dash {
+      margin: 12vh 0 28vh 0;
+    }
 }
   
 /* Laptop */
 @media screen 
   and (min-width: 1440px)
   and (orientation: landscape) {
-    .home-flex {
-      flex-direction: row;
-      margin-top: 0;
-      grid-gap: 8em;
+    .home {
+      height: 63vh;
+      background: linear-gradient(167deg, rgba(255,255,255,1) 0%, rgba(78,127,175,1) 100%);
+      padding-top: 31vh;
     }
-    .title-flex {
-      text-align: left;
-      height: 45%;
-      justify-content: space-around;
+    .plus {
+      margin: 2em 8vw 0 0 !important;
+    }
+    .home-recipe {
+      margin-bottom: -5em;
+    }
+    .register {
+      margin: 20vh 0 20vh 0;
     }
     .add-flex {
       height: 62vh;
@@ -398,20 +423,41 @@ footer {
     .column {
       width: 28vw;
     }  
+    .recipe-card {
+      max-width: 56vw;
+      padding: 4em;
+      height: 60vh;
+    }
+    .ingredients {
+      min-width: 17vw;
+    }
+    .instructions {
+      max-width: 23em;
+    }
     .recipe-card-div {
-      grid-gap: 5em;
-    }  
+      grid-gap: 3em;
+    } 
+    .fab {
+      text-align-last: right;
+      margin: 0 23vw 0 0;
+    }
 }
 
 /* Larger */
 @media screen 
     and (min-device-width: 1920px)
     and (orientation: landscape){
+      .plus {
+        margin: 2em 0vw 0 0 !important;
+      }
       .recipe-card {
         width: 40vw;
         padding: 3em;
-    }
-    .recipe-card-div {
-      margin-top: 3em;
-   }
+      }
+      .recipe-card-div {
+        margin-top: 3em;
+     }
+     .fab {
+      margin: 0 28vw 0 0;
+     }
 }
