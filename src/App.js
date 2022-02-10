@@ -11,11 +11,13 @@ function Copyright() {
   return (
     <footer>
       <Typography variant="body2" color="text.secondary" align="center">
-        {'Copyright © '}
+        {'© '}
+        {new Date().getFullYear()}
+        {' '}
         <Link color="inherit" href="https://recipesbooks.net/">
           Recipe Book
-        </Link>{' '}
-        {new Date().getFullYear()}
+        </Link>{' | '}
+        <Link href='https://github.com/jenna-vec'>Jenna LeFort</Link>
       </Typography>
     </footer>
   );
