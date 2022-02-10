@@ -56,7 +56,7 @@ footer {
 .card {
   background-color: #F5F4F4;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  border-radius: 4px;
+  border-radius: 1em;
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
   min-width: 250px;
   max-width: 74vw;
@@ -111,27 +111,42 @@ footer {
 /* Home Page - Not Signed In*/
 .home {
   height: 100vh;
-  width: 100vw;
-  background: linear-gradient(163deg, rgba(255,255,255,1) 0%, rgba(78,127,175,1) 100%);
+  background-image: url(http://localhost:3000/static/media/background-joanie-simon.be014a4b3b164f4e03de.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding-top: 30vh;
 }
 
 .home-title-flex {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-self: center;
   width: 15em;
+  height: fit-content;
+  padding: 2em;
+  background-color: #f5f4f4de;
+  border-radius: 1em;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.home-button {
+  color: #707070 !important;
+  border-color: #707070 !important;
+}
+
+.credit {
+  background-color: #1976d2;
+  height: 3vh;
 }
 
 .home-recipe {
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient(12deg, rgba(255,255,255,0) 8%, rgba(78,127,175,1) 100%);
+  height: fit-content;
+  padding: 2em 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 8em;
+  background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(78,127,175,0.8435968137254902) 100%);
 }
 
 .register {
@@ -363,8 +378,8 @@ footer {
   and (min-device-width: 481px) 
   and (max-device-width: 1024px) 
   and (orientation:portrait) {
-    .home {
-      height: 43vh;
+    .credit {
+      height: 2vh;
     }
     .plus {
       margin: 2em 2em 0 0 !important;
@@ -399,16 +414,11 @@ footer {
 @media screen 
   and (min-width: 1440px)
   and (orientation: landscape) {
-    .home {
-      height: 63vh;
-      background: linear-gradient(167deg, rgba(255,255,255,1) 0%, rgba(78,127,175,1) 100%);
-      padding-top: 31vh;
+    .home-title-flex {
+      padding: 2em 4em;
     }
     .plus {
       margin: 2em 8vw 0 0 !important;
-    }
-    .home-recipe {
-      margin-bottom: -5em;
     }
     .register {
       margin: 20vh 0 20vh 0;
