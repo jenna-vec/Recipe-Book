@@ -47,7 +47,7 @@ export default function Navigation({ user }) {
     <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            {user.length === 0 ? <Link to='/login'><Button variant="contained">LOGIN</Button></Link> : 
+            {user.length === 0 ? <Link to='/login'><p className='petit-cap white'>LOGIN</p></Link> : 
               <div>
                 <IconButton
                   size="large"
